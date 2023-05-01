@@ -1,7 +1,9 @@
 # 常用命令
 1. SSH密钥生成方法
    ```
-   ssh-keygen -t rsa -C "your@mail.com"
+    ssh-keygen -t rsa -C "mail_addr@mail.com"
+    ssh-keygen -t rsa -C "username"
+    ssh-keygen -t ecdsa -C "username"
    ```
 2. 查看配置信息
    
@@ -13,19 +15,10 @@
    git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
    ```
    2).查看系统config
-   ```
-   git config --system --list
-   ```
-   3).查看当前用户(global)配置  (同时可以查看已配置的别名)
-   ```
-   git config --global --list
-   ```
-   4).查看当前仓库配置信息
-   ```
-   git config --local --list
-   ```
-    5)查看git版本
     ```
+     git config --system --list
+     git config --global --list
+     git config --local --list
     git --version
     ```
 3. raw github ip 查询
@@ -37,33 +30,29 @@
     sudo vim /etc/hosts
     <IP Address> raw.githubusercontent.com
     ```
-4. 查看当前用户所有全局配置(Win / Linux 均适用)
-    ```
-    cat ~/.gitconfig
-    ```
-5.  比较文件差异  
+4.  比较文件差异  
     ```
     git diff <File name>
     ```
-6.  比较文件差异 -- 查看工作区和版本库里面最新版本的区别
+5.  比较文件差异 -- 查看工作区和版本库里面最新版本的区别
     ```
     git diff HEAD -- readme.txt
     ```
-7.  版本回退
+6.  版本回退
     ```
     git reset --hard HEAD^
     git reset --hard <commit id>
     ```
-8.  版本回退 -- 撤销更改
+7.  版本回退 -- 撤销更改
     ```
     git reset HEAD <file>
     ```
     可以把暂存区的修改撤销掉（unstage），重新放回工作区
-9.  查看命令历史
+8.  查看命令历史
     ```
     git reflog
     ```
-10. 丢弃工作区的更改
+9.  丢弃工作区的更改
     ```
     git checkout -- readme.txt
     ```
@@ -71,72 +60,72 @@
     (1)自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
     (2)已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
 
-11. 创建 + 切换分支
+10. 创建 + 切换分支
     ```
     git checkout -b <name>
     git switch -c <name>
     ```
-12. 合并分支，保留分支合并历史，打上标签 issue-101
+11. 合并分支，保留分支合并历史，打上标签 issue-101
     ```
     git merge --no-ff -m "merged bug fix 101" issue-101
     ```
-13. 查看分支合并图
+12. 查看分支合并图
     ```
     git log --graph --pretty=oneline --abbrev-commit
     ```
-14. 同时创建本地分支和远程分支
+13. 同时创建本地分支和远程分支
     ```
     git checkout -b dev origin/dev
     ```
-15. 查看本地分支
+14. 查看本地分支
     ```
     git branch
     ```
-16. 分支管理策略
+15. 分支管理策略
     (1)master分支是主分支，因此要时刻与远程同步；
     (2)dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；
     (3)bug分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；
     (4)feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。
 
-17. 查看远程库的信息
+16. 查看远程库的信息
     ```
     git remote
     git remote -v
     ```
-18. 向远程仓库推送本地分支
+17. 向远程仓库推送本地分支
     ```
     git push origin master
     git push origin dev
     ```
-19. 错误修复 Error Messages : no tracking information
+18. 错误修复 Error Messages : no tracking information
     方法：建立本地分支和远程分支之间的关联
     ```
     git branch --set-upstream-to <branch-name> origin/<branch-name>
     ```
-20. 给最后一个提交的commit创建标签
+19. 给最后一个提交的commit创建标签
     ```
     git tag <name>
     ```
-21. 给指定提交增加tag
+20. 给指定提交增加tag
     ```
     git tag <tag-name> <commit id>
     ```
-22. dd
+21. dd
     ```
     git show
     ```
-23. 删除一个标签
+22. 删除一个标签
     ```
     git tag -d <tag-name>
     ```
-24. 向远程仓库推送一个标签
+23. 向远程仓库推送一个标签
     ```
     git push origin <tag-name>
     ```
-25. 删除远程库中的某个标签
+24. 删除远程库中的某个标签
     git push origin :refs/tags/v0.9
-26. git stash       ???
-27. git stash list  ???
+25. git stash       ???
+26. git stash list  ???
 28. git stash apply ???
 29. git stash drop  ???
 30. git stash pop   ???
