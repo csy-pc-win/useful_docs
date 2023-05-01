@@ -1,10 +1,10 @@
 # Accounts
-| Index | Device   | Image                       | Account                  | Password       | Used Software               |
-|:-----:|:--------:|:---------------------------:|:------------------------:|:--------------:|:---------------------------:|
-| 1     | CSY-PC   | Windows 10                  | csy-pc-win@outlook.com   | csyDLUT198947. | Vscode & Git Log in account |
-| 2     | CSY-PC   | Ubuntu-16.04 from Zhengdian | csy-pc-vm@outlook.com    | csyDLUT198947. | Vscode & Git Log in account |
-| 3     | CSY-YOGA | Windows 10                  | csy-yoga-win@outlook.com | csyDLUT198947. | Vscode & Git Log in account |
-| 4     | CSY-YOGA | Ubuntu-16.04 from Zhengdian | csy-yoga-vm@outlook.com  | csyDLUT198947. | Vscode & Git Log in account |
+| Index | Device   | Image                       | Account                  | Password       | Used Software   | Git Username | Git User Email | Git Local Branch name |
+|:-----:|:--------:|:---------------------------:|:------------------------:|:--------------:|:---------------------------:|:------------:|:--------------:|:-------------------:|
+| 1     | CSY-PC   | Windows 10                  | csy-pc-win@outlook.com   | csyDLUT198947. | Vscode & Git(web local) | csy-pc-win            | csy-pc-win@outlook.com | csy-pc-win-dev
+| 2     | CSY-PC   | Ubuntu-16.04 from Zhengdian | csy-pc-vm@outlook.com    | csyDLUT198947. | Vscode & Git(web local) | csy-pc-vm-ubuntu1604  | csy-pc-vm@outlook.com | csy-pc-vm-ubuntu1604-dev
+| 3     | CSY-YOGA | Windows 10                  | csy-yoga-win@outlook.com | csyDLUT198947. | Vscode & Git(web local) | csy-yoga-win          | csy-yoga-win@outlook.com | csy-yoga-win-dev
+| 4     | CSY-YOGA | Ubuntu-16.04 from Zhengdian | csy-yoga-vm@outlook.com  | csyDLUT198947. | Vscode & Git(web local) | csy-yoga-vm-ubuntu1604| csy-yoga-vm-ubuntu1604@outlook.com | csy-yoga-vm-ubuntu1604-dev
 
 # 常用命令
 1. SSH密钥生成方法
