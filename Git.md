@@ -1,3 +1,11 @@
+# Accounts
+| Index | Device   | Image                       | Account                  | Password       | Used Software               |
+|:-----:|:--------:|:---------------------------:|:------------------------:|:--------------:|:---------------------------:|
+| 1     | CSY-PC   | Windows 10                  | csy-pc-win@outlook.com   | csyDLUT198947. | Vscode & Git Log in account |
+| 2     | CSY-PC   | Ubuntu-16.04 from Zhengdian | csy-pc-vm@outlook.com    | csyDLUT198947. | Vscode & Git Log in account |
+| 3     | CSY-YOGA | Windows 10                  | csy-yoga-win@outlook.com | csyDLUT198947. | Vscode & Git Log in account |
+| 4     | CSY-YOGA | Ubuntu-16.04 from Zhengdian | csy-yoga-vm@outlook.com  | csyDLUT198947. | Vscode & Git Log in account |
+
 # 常用命令
 1. SSH密钥生成方法
    ```
